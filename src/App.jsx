@@ -55,7 +55,7 @@ export default function App(){
           </div>
           <div style={{display:"flex",overflowX:"auto",WebkitOverflowScrolling:"touch",scrollbarWidth:"none",borderTop:"0.5px solid rgba(255,255,255,0.1)"}}>
             {[["schedule","📅",isMobile?"Cal.":"Calendario"],["groups","⚽","Grupos"],["stadiums","🏟️","Estadios"],["teams","🌎","Selecciones"]].map(([id,ic,lbl])=>(
-              <button key={id} onClick={()=>setTab(id)} style={{flexShrink:0,flex:1,padding:isMobile?"10px 6px":"14px 8px",border:"none",borderBottom:"3px solid "+(tab===id?"#60a5fa":"transparent")",background:"transparent",color:tab===id?"#60a5fa":"rgba(255,255,255,0.55)",fontWeight:tab===id?700:400,cursor:"pointer",fontSize:isMobile?12:14,display:"flex",flexDirection:"column",alignItems:"center",gap:2,transition:"all 0.15s",minWidth:isMobile?60:0}}>
+              <button key={id} onClick={()=>setTab(id)} style={{flexShrink:0,flex:1,padding:isMobile?"10px 6px":"14px 8px",border:"none",borderBottom:"3px solid "+(tab===id?"#60a5fa":"transparent"),background:"transparent",color:tab===id?"#60a5fa":"rgba(255,255,255,0.55)",fontWeight:tab===id?700:400,cursor:"pointer",fontSize:isMobile?12:14,display:"flex",flexDirection:"column",alignItems:"center",gap:2,transition:"all 0.15s",minWidth:isMobile?60:0}}>
                 <span style={{fontSize:isMobile?18:20}}>{ic}</span><span>{lbl}</span>
               </button>
             ))}
