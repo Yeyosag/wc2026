@@ -29,7 +29,7 @@ const smartFilter=(q,matches)=>{
 export default function App(){
   const[tab,setTab]=useState("schedule");
   const[q,setQ]=useState("");
-  const[scores,setScores]=useState({});
+  const[scores,setScores]=useState(()=>{try{const s=localStorage.getItem('wc2026_scores');return s?JSON.parse(s):{};}catch{return{};}});
   const[expTeam,setExpTeam]=useState(null);
   const[tSearch,setTSearch]=useState("");
   const[isMobile,setIsMobile]=useState(window.innerWidth<640);
@@ -40,22 +40,22 @@ export default function App(){
   const posLabel={POR:"Porteros",DEF:"Defensas",MED:"Mediocampistas",DEL:"Delanteros"};
   const posCol={POR:"#06b6d4",DEF:"#22c55e",MED:"#f59e0b",DEL:"#ef4444"};
   const px=isMobile?"12px":"24px";
-  const setScore=(id,side,val)=>setScores(p=>({...p,[id]:{...p[id],[side]:val.replace(/\D/,"").slice(0,2)}}));
+  const setScore=(id,side,val)=>setScores(p=>{const n={...p,[id]:{...p[id],[side]:val.replace(/\D/,"").slice(0,2)}};try{localStorage.setItem('wc2026_scores',JSON.stringify(n));}catch{}return n;});
   const Chip=({label,value,color})=>{const active=q===value;return(<button onClick={()=>setQ(active?"":value)} style={{display:"inline-flex",alignItems:"center",gap:5,padding:"9px 16px",border:"2px solid "+(active?color:color+"55"),borderRadius:999,background:active?color:color+"18",color:active?"white":color,cursor:"pointer",fontSize:isMobile?12:13,fontWeight:600,whiteSpace:"nowrap",transition:"all 0.15s",minHeight:40,boxShadow:active?"0 2px 12px "+color+"55":"none"}}>{label}</button>);};
   return(
     <div style={{minHeight:"100vh",background:"var(--color-background-tertiary)",fontFamily:"var(--font-sans)"}}>
-      <div style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:isMobile?"14px 12px 0":"20px 24px 0"}}>
+      <div style={{background:"linear-gradient(135deg,#0f172a 0%,#1e1b4b 60%,#0f172a 100%)",borderBottom:"0.5px solid rgba(255,255,255,0.08)",padding:isMobile?"14px 12px 0":"20px 24px 0"}}>
         <div style={{maxWidth:1060,margin:"0 auto"}}>
           <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:14}}>
             <div style={{width:isMobile?44:56,height:isMobile?44:56,borderRadius:14,background:"linear-gradient(135deg,#1e40af,#7c3aed)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:isMobile?24:30,flexShrink:0}}>⚽</div>
             <div>
-              <h1 style={{margin:0,fontSize:isMobile?18:24,fontWeight:700,color:"var(--color-text-primary)",letterSpacing:-0.5}}>FIFA World Cup 2026™</h1>
-              <p style={{margin:"2px 0 0",fontSize:isMobile?11:13,color:"var(--color-text-secondary)"}}>🇲🇽 México · 🇨🇦 Canadá · 🇺🇸 EE.UU. · 11 Jun – 19 Jul 2026 · Creado por Ing. Sergio Arroyo — sergio@agenticgrowth.studio</p>
+              <h1 style={{margin:0,fontSize:isMobile?18:24,fontWeight:700,color:"#ffffff",letterSpacing:-0.5}}>FIFA World Cup 2026™</h1>
+              <p style={{margin:"2px 0 0",fontSize:isMobile?11:13,color:"rgba(255,255,255,0.75)"}}>🇲🇽 México · 🇨🇦 Canadá · 🇺🇸 EE.UU. · 11 Jun – 19 Jul 2026 · Creado por Ing. Sergio Arroyo — sergio@agenticgrowth.studio</p>
             </div>
           </div>
-          <div style={{display:"flex",overflowX:"auto",WebkitOverflowScrolling:"touch",scrollbarWidth:"none",borderTop:"0.5px solid var(--color-border-tertiary)"}}>
+          <div style={{display:"flex",overflowX:"auto",WebkitOverflowScrolling:"touch",scrollbarWidth:"none",borderTop:"0.5px solid rgba(255,255,255,0.1)"}}>
             {[["schedule","📅",isMobile?"Cal.":"Calendario"],["groups","⚽","Grupos"],["stadiums","🏟️","Estadios"],["teams","🌎","Selecciones"]].map(([id,ic,lbl])=>(
-              <button key={id} onClick={()=>setTab(id)} style={{flexShrink:0,flex:1,padding:isMobile?"10px 6px":"14px 8px",border:"none",borderBottom:"3px solid "+(tab===id?"#3b82f6":"transparent"),background:"transparent",color:tab===id?"#3b82f6":"var(--color-text-secondary)",fontWeight:tab===id?700:400,cursor:"pointer",fontSize:isMobile?12:14,display:"flex",flexDirection:"column",alignItems:"center",gap:2,transition:"all 0.15s",minWidth:isMobile?60:0}}>
+              <button key={id} onClick={()=>setTab(id)} style={{flexShrink:0,flex:1,padding:isMobile?"10px 6px":"14px 8px",border:"none",borderBottom:"3px solid "+(tab===id?"#60a5fa":"transparent")",background:"transparent",color:tab===id?"#60a5fa":"rgba(255,255,255,0.55)",fontWeight:tab===id?700:400,cursor:"pointer",fontSize:isMobile?12:14,display:"flex",flexDirection:"column",alignItems:"center",gap:2,transition:"all 0.15s",minWidth:isMobile?60:0}}>
                 <span style={{fontSize:isMobile?18:20}}>{ic}</span><span>{lbl}</span>
               </button>
             ))}
