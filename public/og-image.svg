@@ -35,12 +35,12 @@
   <text x="680" y="310" text-anchor="middle" font-size="145" font-weight="900" fill="url(#gold)" filter="url(#softglow)" letter-spacing="-4" font-family="Arial,sans-serif">2026</text>
   <text x="680" y="358" text-anchor="middle" font-size="20" font-weight="500" fill="#e2e8f0" letter-spacing="3" opacity="0.9" font-family="Arial,sans-serif">CALENDARIO INTERACTIVO</text>
   <rect x="380" y="378" width="600" height="1.5" rx="1" fill="url(#gold)" opacity="0.6"/>
-  <text x="560" y="440" text-anchor="middle" font-size="42" font-family="Arial,sans-serif">&#x1F1F2;&#x1F1FD;</text>
-  <text x="680" y="440" text-anchor="middle" font-size="42" font-family="Arial,sans-serif">&#x1F1E8;&#x1F1E6;</text>
-  <text x="800" y="440" text-anchor="middle" font-size="42" font-family="Arial,sans-serif">&#x1F1FA;&#x1F1F8;</text>
-  <text x="560" y="465" text-anchor="middle" font-size="13" fill="#94a3b8" font-weight="500" letter-spacing="1" font-family="Arial,sans-serif">M&#xC9;XICO</text>
-  <text x="680" y="465" text-anchor="middle" font-size="13" fill="#94a3b8" font-weight="500" letter-spacing="1" font-family="Arial,sans-serif">CANAD&#xC1;</text>
-  <text x="800" y="465" text-anchor="middle" font-size="13" fill="#94a3b8" font-weight="500" letter-spacing="1" font-family="Arial,sans-serif">EE.UU.</text>
+  <text x="560" y="440" text-anchor="middle" font-size="42" font-family="Arial,sans-serif" fill="#ffffff">&#x1F1F2;&#x1F1FD;</text>
+  <text x="680" y="440" text-anchor="middle" font-size="42" font-family="Arial,sans-serif" fill="#ffffff">&#x1F1E8;&#x1F1E6;</text>
+  <text x="800" y="440" text-anchor="middle" font-size="42" font-family="Arial,sans-serif" fill="#ffffff">&#x1F1FA;&#x1F1F8;</text>
+  <text x="560" y="465" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="500" letter-spacing="1" font-family="Arial,sans-serif">M&#xC9;XICO</text>
+  <text x="680" y="465" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="500" letter-spacing="1" font-family="Arial,sans-serif">CANAD&#xC1;</text>
+  <text x="800" y="465" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="500" letter-spacing="1" font-family="Arial,sans-serif">EE.UU.</text>
   <circle cx="622" cy="443" r="3" fill="#f59e0b" opacity="0.7"/>
   <circle cx="740" cy="443" r="3" fill="#f59e0b" opacity="0.7"/>
   <text x="680" y="515" text-anchor="middle" font-size="15" fill="#64748b" letter-spacing="2" font-family="Arial,sans-serif">104 PARTIDOS  &#xB7;  48 SELECCIONES  &#xB7;  16 ESTADIOS</text>
