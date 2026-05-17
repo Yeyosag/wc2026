@@ -50,7 +50,7 @@ export default function App(){
             <div style={{width:isMobile?44:56,height:isMobile?44:56,borderRadius:14,background:"linear-gradient(135deg,#1e40af,#7c3aed)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:isMobile?24:30,flexShrink:0}}>⚽</div>
             <div>
               <h1 style={{margin:0,fontSize:isMobile?18:24,fontWeight:700,color:"var(--color-text-primary)",letterSpacing:-0.5}}>FIFA World Cup 2026™</h1>
-              <p style={{margin:"2px 0 0",fontSize:isMobile?11:13,color:"var(--color-text-secondary)"}}>🇲🇽 México · 🇨🇦 Canadá · 🇺🇸 EE.UU. · 11 Jun – 19 Jul 2026</p>
+              <p style={{margin:"2px 0 0",fontSize:isMobile?11:13,color:"var(--color-text-secondary)"}}>🇲🇽 México · 🇨🇦 Canadá · 🇺🇸 EE.UU. · 11 Jun – 19 Jul 2026 · Creado por Ing. Sergio Arroyo — sergio@agenticgrowth.studio</p>
             </div>
           </div>
           <div style={{display:"flex",overflowX:"auto",WebkitOverflowScrolling:"touch",scrollbarWidth:"none",borderTop:"0.5px solid var(--color-border-tertiary)"}}>
